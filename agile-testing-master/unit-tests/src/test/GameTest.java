@@ -28,8 +28,6 @@ public class GameTest {
     @Before
 	public void setUp() throws Exception {
         this.testGame = new Game();
-		this.newHeroName = "Gentil Gentil";
-        this.newEnemyName = "Mechant Mechant" ;
 		System.out.println("Avant un test");
 	}
 
@@ -43,13 +41,14 @@ public class GameTest {
         Method method = Game.class.getDeclaredMethod("createNewHero");
         method.setAccessible(true);
         Hero newHero = (Hero) method.invoke(testGame);
-        assertNotNull(newHero);
-
-        
+        assertNotNull(newHero);        
     }
-
     @Test
     public void testCreateNewEnemy() throws Exception {
-
+        Game testGame = new Game();
+        Method method = Game.class.getDeclaredMethod("createNewEnemy");
+        method.setAccessible(true);
+        Enemy newEnemy = (Enemy) method.invoke(testGame);
+        assertNotNull(newEnemy);
     }
 }

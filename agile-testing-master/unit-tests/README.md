@@ -66,13 +66,14 @@ Thank you.
 Quick cmd compiling :
 cd .. && cd src/ && javac -d ../bin/ test/HeroTest.java
 cd .. && cd src/ && javac -d ../bin/ test/EnemyTest.java
-
+cd .. && cd src/ && javac -d ../bin/ test/GameTest.java
 
 
 
 Quick cmd running tests:
 cd .. && cd bin/ && java org.junit.runner.JUnitCore test.HeroTest
 cd .. && cd bin/ && java org.junit.runner.JUnitCore test.EnemyTest
+cd .. && cd bin/ && java org.junit.runner.JUnitCore test.GameTest
 
 
 

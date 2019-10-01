@@ -33,6 +33,7 @@ public class EnemyTest {
     @Before
     public void setUp() throws Exception {
         hero = new Hero("Jaina Portvaillant");
+        enemy = new Enemy("Sylvanna", 2);
         System.out.println("Avant un test");
     }
 
@@ -43,12 +44,10 @@ public class EnemyTest {
 
     @Test
     public void testEnemyProperties() throws Exception {
-        Enemy enemyTest = new Enemy("Sylvannas", 1);
-
-        assertThat(enemyTest, hasProperty("name"));
-        assertThat(enemyTest, hasProperty("hp"));
-        assertThat(enemyTest, hasProperty("level"));
-        assertThat(enemyTest, hasProperty("atk"));
+        assertThat(enemy, hasProperty("name"));
+        assertThat(enemy, hasProperty("hp"));
+        assertThat(enemy, hasProperty("level"));
+        assertThat(enemy, hasProperty("atk"));
     }
 
     @Test

@@ -29,6 +29,14 @@ public class Enemy {
         this.hp -= damage;
     }
 
+    public Integer getLevel() {
+        return this.level;
+    }
+    
+    public Integer getAtk() {
+        return this.atk;
+    }
+
     public void attack(Hero hero) {
         Random rand = new Random();
         int randomNum = rand.nextInt(this.level + 1);

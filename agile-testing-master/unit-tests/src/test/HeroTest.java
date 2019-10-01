@@ -10,7 +10,6 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 import static org.junit.Assert.*;
 
-
 import static org.hamcrest.Matchers.*;
 
 import codingfactory.rpgconsole.hero.Hero;
@@ -53,6 +52,7 @@ public class HeroTest {
 		assertThat(hero, hasProperty("name"));
         assertThat(hero, hasProperty("name", is("Jaina Portvaillant")));
 		assertThat(hero, hasProperty("level"));
+		assertThat(hero, hasProperty("hp"));
 		assertThat(hero, hasProperty("atk"));
 	}
 

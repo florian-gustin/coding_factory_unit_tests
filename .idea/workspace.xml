@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06268348-3d9c-44c5-8ae6-dd51023719ba" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/agile-testing-master/unit-tests/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/agile-testing-master/unit-tests/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agile-testing-master/unit-tests/src/test/HeroTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/agile-testing-master/unit-tests/src/test/HeroTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agile-testing-master/functional-tests/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/agile-testing-master/functional-tests/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agile-testing-master/functional-tests/bin/test/functional/FunctionalTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/agile-testing-master/functional-tests/bin/test/functional/FunctionalTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,6 +27,7 @@
   </component>
   <component name="ProjectId" id="1Raven44Be56VhkVjOYzt76hlP9" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -61,7 +63,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1569918118242</updated>
-      <workItem from="1569918119476" duration="2902000" />
+      <workItem from="1569918119476" duration="5868000" />
+      <workItem from="1570003308557" duration="448000" />
     </task>
     <servers />
   </component>
@@ -73,7 +76,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

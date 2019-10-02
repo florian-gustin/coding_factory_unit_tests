@@ -46,6 +46,7 @@ javac -d ../bin/ test/functional/FunctionalTest.java
 
 cd src/ && javac -d ../bin/ test/functional/FunctionalTest.java && cd .. && cd bin/ && java org.junit.runner.JUnitCore test.functional.FunctionalTest
 
+cd .. && cd src/ && javac -d ../bin/ test/functional/FunctionalTest.java && cd .. && cd bin/ && java org.junit.runner.JUnitCore test.functional.FunctionalTest
 
 ## Then run your test cases (from bin tests folder)
 

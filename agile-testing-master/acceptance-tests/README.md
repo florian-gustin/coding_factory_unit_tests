@@ -53,3 +53,6 @@ Thank you.
 cd src/ && javac -d ../bin/ test/acceptance/Homepage*.java && cd .. && cd bin/ && java org.junit.runner.JUnitCore test.acceptance.HomepageTest
 Les autrs : 
 cd .. && cd src/ && javac -d ../bin/ test/acceptance/Homepage*.java && cd .. && cd bin/ && java org.junit.runner.JUnitCore test.acceptance.HomepageTest
+
+configurationtest
+d .. && cd src/ && javac -d ../bin/ test/acceptance/Configurateur*.java && cd .. && cd bin/ && java org.junit.runner.JUnitCore test.acceptance.ConfigurateurTest

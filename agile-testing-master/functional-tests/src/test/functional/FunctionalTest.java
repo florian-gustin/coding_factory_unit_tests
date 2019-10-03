@@ -17,6 +17,8 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import org.openqa.selenium.By;
+
 public class FunctionalTest {
 
 	private WebDriver driver;
@@ -31,6 +33,7 @@ public class FunctionalTest {
      }
 
     // Test de la Story #1-homepage (https://trello.com/c/WKTneu9o/1-homepage)
+<<<<<<< Updated upstream
 //	@Test
 //    public void testHomepage() throws Exception {
 //        driver.get("https://www.meetup.com/fr-FR/");
@@ -76,6 +79,28 @@ public class FunctionalTest {
     }
 
 
+=======
+	@Test
+    public void testHomepage() throws Exception {
+        driver.get("https://www.meetup.com/fr-FR/");
+        //assertEquals(driver.getTitle(), "Partagez vos passions | Meetup");
+        assertTrue(driver.findElement(By.xpath("//meta[@name='description']")).getAttribute("content").contains("Partagez vos passions et faites bouger votre ville"));
+        assertEquals(driver.findElement(By.xpath("//h1")).getText(), "Le monde vous tend les bras");
+        // exploreHome-hero-subTitle
+        assertEquals(driver.findElement(By.className("exploreHome-hero-subTitle")).getText(), "Rejoignez un groupe local pour rencontrer du monde, tester une nouvelle activité ou partager vos passions.");        
+		// TODO
+		// To Be Completed By Coders From Coding Factory
+    }
+
+    @Test
+    public void testOutdoorsAdventures() throws Exception {
+        driver.get("https://www.meetup.com/fr-FR/find/outdoors-adventure/");
+
+        assertTrue((driver.getTitle().toLowerCase().contains("nature") && drivers.getTitle().toLowerCase().contains("aventure")) == true);
+        assertEquals((driver.findElement(By.className("text--display1")).getText()), "Nature");
+        assertEquals((driver.findElement(By.className("text--display1")).getText()), "aventure");
+    }
+>>>>>>> Stashed changes
 
     // Test de la Story n ...
     // TODO

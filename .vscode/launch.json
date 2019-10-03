@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Starter",
+            "request": "launch",
+            "mainClass": "codingfactory.rpgconsole.game.Starter"
+        }
+    ]
+}

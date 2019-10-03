@@ -71,4 +71,6 @@ public class HeroTest {
 		hero.attack(enemyTest);
 		assertNotEquals(enemyTest, hpStart);
 	}
+
+
 }

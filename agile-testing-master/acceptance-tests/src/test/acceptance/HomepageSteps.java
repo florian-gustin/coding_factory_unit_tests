@@ -65,7 +65,7 @@ public class HomepageSteps {
 	@Then("^le titre navbar doit être \"([^\"]*)\"$")
 	public void le_titre_navbar_doit_être(String arg1) throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
-		assertTrue(driver.findElements(By.cssSelector(".tds-hero_header")).contains(arg1) == true);
+		assertThat(driver.findElements(By.cssSelector(".tds-hero_header")).getText(), containsString(arg1));
 //		List<WebElement> elements = new ArrayList();
 //		for(int i = 0; i < 5; i++){
 //
@@ -86,7 +86,7 @@ public class HomepageSteps {
 	@Then("^le titre topnavbar doit être \"([^\"]*)\"$")
 	public void le_titre_topnavbar_doit_être(String arg1) throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
-		throw new PendingException();
+
 	}
 
 	@When("^je clique cela me redirige vers les modèles \"([^\"]*)\"$")

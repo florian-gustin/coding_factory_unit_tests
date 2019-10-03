@@ -1,6 +1,7 @@
 package test.acceptance;
 
 import java.util.concurrent.TimeUnit;
+import java.util.*;
 
 import java.lang.*;
 
@@ -14,12 +15,12 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 import static org.junit.Assert.*;
-
 import static org.hamcrest.Matchers.*;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.*;
 
 public class HomepageSteps {
 
@@ -52,60 +53,66 @@ public class HomepageSteps {
 		// By XPATH, si vous préférez...
 	    // assertEquals(driver.findElement(By.xpath("//meta[@name='description']")).getAttribute("content"), arg1);
 	}
-//----------------------------------------------------------------------------------------------------
+
+	//////////
 
 	@Given("^je suis sur homepage_navbar$")
 	public void je_suis_sur_homepage_navbar() throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
-		throw new PendingException();
+		driver.get(" https://www.tesla.com/fr_FR/");
 	}
-	@Then("^le titre de la navbar doit être  \"([^\"]*)\"$")
-	public void le_titre_de_la_navbar_doit_être(String arg1) throws Throwable {
+
+	@Then("^le titre navbar doit être \"([^\"]*)\"$")
+	public void le_titre_navbar_doit_être(String arg1) throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
-		throw new PendingException();
+		List<WebElement> elements = driver.findElements(By.xpath("/html/body/div[1]/main/section/ul"));
+		for (WebElement element : elements) {
+			assertThat(element, is(arg1));
+		}
 	}
-
-
-
-//----------------------------------------------------------------------------------------------------
 
 	@Given("^je suis sur homepage_top_navbar$")
 	public void je_suis_sur_homepage_top_navbar() throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
+		driver.get(" https://www.tesla.com/fr_FR/");
 		throw new PendingException();
 	}
 
-	@Then("^le titre du lien doit être \"([^\"]*)\"$")
-	public void le_titre_du_lien_doit_être(String arg1) throws Throwable {
+	@Then("^le titre topnavbar doit être \"([^\"]*)\"$")
+	public void le_titre_topnavbar_doit_être(String arg1) throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
 		throw new PendingException();
 	}
 
-	@When("^je clique cela me redirige vers \"([^\"]*)\"$")
-	public void je_clique_cela_me_redirige_vers(String arg1) throws Throwable {
+	@When("^je clique cela me redirige vers les modèles \"([^\"]*)\"$")
+	public void je_clique_cela_me_redirige_vers_les_modèles(String arg1) throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
 		throw new PendingException();
 	}
 
-//----------------------------------------------------------------------------------------------------
 	@Given("^je suis sur homepage_burger_menu$")
 	public void je_suis_sur_homepage_burger_menu() throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
+		driver.get(" https://www.tesla.com/fr_FR/");
 		throw new PendingException();
 	}
-	@Then("^le titre du lien  du menu_burger doit être \"([^\"]*)\"$")
-	public void le_titre_du_lien_du_menu_burger_doit_être(String arg1) throws Throwable {
+
+	@Then("^le titre burger_menu doit être \"([^\"]*)\"$")
+	public void le_titre_burger_menu_doit_être(String arg1) throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
 		throw new PendingException();
 	}
 
-	@When("^je clique cela me redirige vers l'url : \"([^\"]*)\"$")
-	public void je_clique_cela_me_redirige_vers_l_url(String arg1) throws Throwable {
+	@When("^je clique cela me redirige vers les sections \"([^\"]*)\"$")
+	public void je_clique_cela_me_redirige_vers_les_sections(String arg1) throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
 		throw new PendingException();
 	}
-//----------------------------------------------------------------------------------------------------
 
+
+
+
+	/////////
 
 	@After
 	public void afterScenario() {

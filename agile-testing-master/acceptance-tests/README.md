@@ -35,6 +35,7 @@ cd src/
 
 ### Tests
 javac -d ../bin/ test/acceptance/Homepage*.java
+
 ```
 
 ## Then run your test cases (from bin tests folder)

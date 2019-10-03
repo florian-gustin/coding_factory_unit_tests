@@ -6,7 +6,7 @@ Feature: Fonctionnalités de ma page d'accueil
 
 	Scenario Outline: Vérification de la présence des 5 titres dans la navBar verticale
 		Given je suis sur homepage_navbar
-		Then le titre doit être "<li>"
+		Then le titre navbar doit être "<li>"
 		Examples:
 			| li 									|
 			| Model 3 								|
@@ -17,8 +17,8 @@ Feature: Fonctionnalités de ma page d'accueil
 
 	Scenario Outline: Vérification de la présence des 6 liens dans la top_navbar
 		Given je suis sur homepage_top_navbar
-		Then le titre du lien doit être "<li>"
-		When je clique cela me redirige vers "<a>"
+		Then le titre topnavbar doit être "<li>"
+		When je clique cela me redirige vers les modèles "<a>"
 		Examples:
 			| li 	   | a									  |
 			| Model S  | https://www.tesla.com/fr_FR/models   |
@@ -30,8 +30,8 @@ Feature: Fonctionnalités de ma page d'accueil
 
 	Scenario Outline: Vérification de la présence des liens dans le burger_menu
 		Given je suis sur homepage_burger_menu
-		Then le titre du lien doit être "<li>"
-		When je clique cela me redirige vers "<a>"
+		Then le titre burger_menu doit être "<li>"
+		When je clique cela me redirige vers les sections "<a>"
 		Examples:
 			| li 	                 | a								          	 |
 			| Actualités             | https://www.tesla.com/fr_FR/blog 			 |

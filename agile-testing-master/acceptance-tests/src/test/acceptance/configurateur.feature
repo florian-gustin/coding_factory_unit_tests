@@ -23,3 +23,12 @@ Feature: Configurateur Tesla Modèle S
         | modèle           | mode de payement | mensualités | éco carbu estim | montant final |
         | Grande Autonomie | LOA Business     | 913         | 108             | 102982        |
         | Performance      | LOA Business     | 1115        | 108             | 122068        |
+    Scenario: Ajouter le pilotage automatique engendre une augmentation du crédit à 76E/Mois
+        Given Je suis à l'étape "Pilotage automatique"
+        When Cliquer sur "Option ajoutée"
+        Then Le "crédit ballon" passe de "857 € / mois" à "933 € / mois" soit une augmentation de 76E/mois
+    Scenario: Je souhaite connaître les boutiques Tesla
+        Given Je suis à l'étape "Règlement"
+        When Je clique sur le logo TESLA
+        And Je vais en bas de page et je clique sur "Localisations"
+        Then Cela me redirige sur "https://www.tesla.com/fr_FR/findus/list"

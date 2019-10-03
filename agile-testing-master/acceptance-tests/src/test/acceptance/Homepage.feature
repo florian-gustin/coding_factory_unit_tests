@@ -40,7 +40,7 @@ Feature: Fonctionnalités de ma page d'accueil
 			| Entreprise             | https://www.tesla.com/fr_FR/Enterprise        |
 			| Recharger              | https://www.tesla.com/fr_FR/charging 		 |
 			| Nous trouver           | https://www.tesla.com/fr_FR/findus   		 |
-			| Evénements             | https://www.tesla.com/fr_FR/events  			 |
+			| événements             | https://www.tesla.com/fr_FR/events  			 |
 			| Empreinte carbone      | https://www.tesla.com/fr_FR/carbonimpact      |
 			| Assistance             | https://www.tesla.com/fr_FR/support   		 |
 

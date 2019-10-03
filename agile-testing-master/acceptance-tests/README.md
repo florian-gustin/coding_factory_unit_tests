@@ -47,3 +47,9 @@ java org.junit.runner.JUnitCore test.acceptance.HomepageTest
 ## Enjoy Agile Testing
 
 Thank you.
+
+- depuis acceptance-test -
+1er Test :
+cd src/ && javac -d ../bin/ test/acceptance/Homepage*.java && cd .. && cd bin/ && java org.junit.runner.JUnitCore test.acceptance.HomepageTest
+Les autrs : 
+cd .. && cd src/ && javac -d ../bin/ test/acceptance/Homepage*.java && cd .. && cd bin/ && java org.junit.runner.JUnitCore test.acceptance.HomepageTest

@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06268348-3d9c-44c5-8ae6-dd51023719ba" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agile-testing-master/functional-tests/bin/test/functional/FunctionalTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/agile-testing-master/functional-tests/bin/test/functional/FunctionalTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agile-testing-master/functional-tests/src/test/functional/FunctionalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/agile-testing-master/functional-tests/src/test/functional/FunctionalTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agile-testing-master/acceptance-tests/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/agile-testing-master/acceptance-tests/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +72,7 @@
       <updated>1569918118242</updated>
       <workItem from="1569918119476" duration="5868000" />
       <workItem from="1570003308557" duration="17487000" />
-      <workItem from="1570091129331" duration="244000" />
+      <workItem from="1570091129331" duration="564000" />
     </task>
     <servers />
   </component>

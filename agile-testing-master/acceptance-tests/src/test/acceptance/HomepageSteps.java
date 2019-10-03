@@ -33,6 +33,7 @@ public class HomepageSteps {
 		// driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	}
+//----------------------------------------------------------------------------------------------------
 
 	@Given("^je suis sur la homepage$")
 	public void je_suis_sur_la_homepage() throws Throwable {
@@ -51,13 +52,22 @@ public class HomepageSteps {
 		// By XPATH, si vous préférez...
 	    // assertEquals(driver.findElement(By.xpath("//meta[@name='description']")).getAttribute("content"), arg1);
 	}
+//----------------------------------------------------------------------------------------------------
 
 	@Given("^je suis sur homepage_navbar$")
 	public void je_suis_sur_homepage_navbar() throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
 		throw new PendingException();
 	}
+	@Then("^le titre de la navbar doit être  \"([^\"]*)\"$")
+	public void le_titre_de_la_navbar_doit_être(String arg1) throws Throwable {
+		// Write code here that turns the phrase above into concrete actions
+		throw new PendingException();
+	}
 
+
+
+//----------------------------------------------------------------------------------------------------
 
 	@Given("^je suis sur homepage_top_navbar$")
 	public void je_suis_sur_homepage_top_navbar() throws Throwable {
@@ -77,22 +87,24 @@ public class HomepageSteps {
 		throw new PendingException();
 	}
 
-
+//----------------------------------------------------------------------------------------------------
 	@Given("^je suis sur homepage_burger_menu$")
 	public void je_suis_sur_homepage_burger_menu() throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
 		throw new PendingException();
 	}
+	@Then("^le titre du lien  du menu_burger doit être \"([^\"]*)\"$")
+	public void le_titre_du_lien_du_menu_burger_doit_être(String arg1) throws Throwable {
+		// Write code here that turns the phrase above into concrete actions
+		throw new PendingException();
+	}
 
-
-
-
-
-
-
-
-
-
+	@When("^je clique cela me redirige vers l'url : \"([^\"]*)\"$")
+	public void je_clique_cela_me_redirige_vers_l_url(String arg1) throws Throwable {
+		// Write code here that turns the phrase above into concrete actions
+		throw new PendingException();
+	}
+//----------------------------------------------------------------------------------------------------
 
 
 	@After

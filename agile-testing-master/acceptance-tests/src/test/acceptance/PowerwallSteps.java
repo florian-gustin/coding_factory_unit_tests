@@ -41,19 +41,25 @@ public class PowerwallSteps {
         driver.get("https://www.tesla.com/fr_FR/powerwall");
     }
 
-    @When("^je sélectionne mes critères \"([^\"]*)\"$")
-    public void je_sélectionne_mes_critères(String arg1) throws Throwable {
+    @When("^je sélectionne mes critères de \"([^\"]*)\" et \"([^\"]*)\"$")
+    public void je_sélectionne_mes_critères_de_et(String arg1, String arg2) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+
+        // find how to select manually by the bot
+        assertThat(driver.findElement(By.xpath("*[@id=\"react-content\"]/div/div/div[4]/div/div[1]/div/div/div/div[3]/p")).getText(), containsString(arg1));
+        // get by the xpath the class changes or manually click on the button
+        assertThat(driver.findElement(By.xpath("*[@id=\"react-content\"]/div/div/div[4]/div/div[1]/div/div/div/div[3]/p")).getText(), containsString(arg2));
+
     }
 
-    @Then("^je dois avoir le bon retour de données \"([^\"]*)\"$")
-    public void je_dois_avoir_le_bon_retour_de_données(String arg1) throws Throwable {
+    @Then("^je dois avoir un retour de données cohérent pour \"([^\"]*)\", (\\d+), (\\d+)kwh/jour$")
+    public void je_dois_avoir_un_retour_de_données_cohérent_pour_kwh_jour(String arg1, int arg2, int arg3) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
-    }
 
-    //*[@id="react-content"]/div/div/div[4]/div/div[1]/div/div/div/div[3]/p
+        // read the result in kwh
+        // read the result % autoalimenté
+        // read the result conso énergie estimée
+    }
 
     @After
     public void afterScenario() {

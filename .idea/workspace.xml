@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="06268348-3d9c-44c5-8ae6-dd51023719ba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agile-testing-master/acceptance-tests/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/agile-testing-master/acceptance-tests/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agile-testing-master/acceptance-tests/src/test/acceptance/HomepageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/agile-testing-master/acceptance-tests/src/test/acceptance/HomepageSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agile-testing-master/acceptance-tests/bin/test/acceptance/PowerwallSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/agile-testing-master/acceptance-tests/bin/test/acceptance/PowerwallSteps.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agile-testing-master/acceptance-tests/src/test/acceptance/Powerwall.feature" beforeDir="false" afterPath="$PROJECT_DIR$/agile-testing-master/acceptance-tests/src/test/acceptance/Powerwall.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agile-testing-master/acceptance-tests/src/test/acceptance/PowerwallSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/agile-testing-master/acceptance-tests/src/test/acceptance/PowerwallSteps.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,6 +79,7 @@
       <workItem from="1570105840464" duration="2115000" />
       <workItem from="1570108250892" duration="7554000" />
       <workItem from="1570117383300" duration="10625000" />
+      <workItem from="1570144441058" duration="2323000" />
     </task>
     <servers />
   </component>

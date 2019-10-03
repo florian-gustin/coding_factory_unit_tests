@@ -9,7 +9,7 @@ Feature: Fonctionnalités de ma page d'accueil
 		Then le titre navbar doit être "<li>"
 		Examples:
 			| li 									|
-			| Model 3 								|
+			| Tesla 								|
 			| Découvrir Tesla 						|
 			| Une alimentation pour tous vos objets |
 			| Accessoires Tesla 					|

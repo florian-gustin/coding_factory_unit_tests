@@ -9,20 +9,20 @@ Feature: Configurateur Tesla Modèle S
     #critère 2
     Scenario: Vérifier l'affichage par défaut du prix affiché
         Given Je suis sur la page du configurateur
-        Then Le prix affiché est un "credit ballon" de "857 € / mois"
+        Then Le prix affiché est un "CRÉDIT BALLON" de "A partir de 857 € /mois*"
 
     #critère 3
-    Scenario Outline: 
+    Scenario Outline: Vérifier les estimations
         Given Je suis sur la page du configurateur
         When  je sélectionne le "<modèle>"
-        And Je sélectionne le "<mode de payement>"
+        And Je sélectionne le mode paiement "<mode de paiement>"
         Then Les mensualités sont de "<mensualités>"
         And Les économies de carburant estimées sont de "<éco carbu estim>"
-        And Le montant total au terme dj contrat est de "<montant final>"
+        And Le montant total au terme du contrat est de "<montant final>"
         Examples:
-        | modèle           | mode de payement | mensualités | éco carbu estim | montant final |
-        | Grande Autonomie | LOA Business     | 913         | 108             | 102982        |
-        | Performance      | LOA Business     | 1115        | 108             | 122068        |
+        | modèle           | mode de paiement | mensualités                  | éco carbu estim | montant final  |
+        | Grande Autonomie | LOA Business     | A partir de 913 € /mois*     | - 108 € /mois   | 102 982 €      |
+        | Performance      | LOA Business     | A partir de 1 115 € /mois*   | - 108 € /mois   | 122 068 €      |
 
     Scenario: Ajouter le pilotage automatique engendre une augmentation du crédit de 76E/Mois
         Given Je suis à l'étape "Pilotage automatique"

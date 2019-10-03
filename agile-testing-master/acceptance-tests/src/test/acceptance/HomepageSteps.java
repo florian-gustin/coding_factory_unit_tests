@@ -65,10 +65,16 @@ public class HomepageSteps {
 	@Then("^le titre navbar doit être \"([^\"]*)\"$")
 	public void le_titre_navbar_doit_être(String arg1) throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
-		List<WebElement> elements = driver.findElements(By.CssSelector(".side_nav-container"));
-		for (WebElement element : elements) {
-			assertEquals(element.getAttribute("data-title"), containsString(arg1));
-		}
+		assertTrue(driver.findElements(By.cssSelector(".tds-hero_header")).contains(arg1) == true);
+//		List<WebElement> elements = new ArrayList();
+//		for(int i = 0; i < 5; i++){
+//
+//		}
+//
+//		List<WebElement> elements = driver.findElements(By.CssSelector(".side_nav-container li:eq(0)"));
+//		for (WebElement element : elements) {
+//			assertEquals(element.getAttribute("data-title"), containsString(arg1));
+//		}
 	}
 
 	@Given("^je suis sur homepage_top_navbar$")

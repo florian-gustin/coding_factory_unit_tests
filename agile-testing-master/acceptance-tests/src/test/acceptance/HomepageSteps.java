@@ -67,7 +67,13 @@ public class HomepageSteps {
 		// Write code here that turns the phrase above into concrete actions
 		switch (arg1) {
 			case "Model 3":
-				assertThat(driver.findElement(By.xpath("/html/body/div[1]/main/section/section/div/div/div/div/section[1]/section/div/div[2]/div[2]/div[1]/h1")).getText(), containsString(arg1));
+				if((driver.findElement(By.xpath("/html/body/div[1]/main/section/section/div/div/div/div/section[1]/section/div/div[2]/div[2]/div[1]/h1")).getText(), containsString(arg1))=="") {
+					assertThat(driver.findElement(By.cssSelector("#item1-812530015-content > div:nth-child(1) > h1:nth-child(1)")).getText(), containsString(arg1));
+				}
+				else {
+					assertThat(driver.findElement(By.xpath("/html/body/div[1]/main/section/section/div/div/div/div/section[1]/section/div/div[2]/div[2]/div[1]/h1")).getText(), containsString(arg1));
+				};
+
 				break;
 			case "Découvrir Tesla":
 				assertThat(driver.findElement(By.xpath("/html/body/div[1]/main/section/section/div/div/div/div/section[2]/section/div/div[2]/div[2]/div[1]/header/h1/span")).getText(), containsString(arg1));

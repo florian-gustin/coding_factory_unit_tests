@@ -95,7 +95,9 @@ public class ConfigurateurSteps {
     @Then("^Les mensualités sont de \"([^\"]*)\"$")
     public void les_mensualités_sont_de(String arg1) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        assertEquals(driver.findElement(By.xpath("//p[@class='finance-item--price finance-item--price-before-savings']")).getText(), arg1);
+        if(arg1 == "A partir de 1 115 € /mois*") {
+             driver.findElement(By.xpath("/html/body/div/div/main/div/div/div[2]/div[2]/div/div[3]/div/div[3]/div[2]/div[1]/div/span/p")).click();
+        }
     }
 
     @Then("^Les économies de carburant estimées sont de \"([^\"]*)\"$")
@@ -106,8 +108,14 @@ public class ConfigurateurSteps {
 
     @Then("^Le montant total au terme du contrat est de \"([^\"]*)\"$")
     public void le_montant_total_au_terme_du_contrat_est_de(String arg1) throws Throwable {
+        if(arg1 == "122 068 €") {
+            driver.findElement(By.xpath("/html/body/div/div/main/div/div/div[2]/div[2]/div/div[3]/div/div[3]/div[2]/div[1]/div/span/p")).click();            
+        }
         driver.findElement(By.xpath("//a[@class='finance-content--modal']")).click();
-        assertEquals(driver.findElement(By.xpath("//input[@id='totalLeaseAmount']")).getAttribute("value"), arg1);
+
+        driver.findElement(By.xpath("/html/body/div/div/main/div/div/div[1]/div/div[2]/div[2]/div/div/div[1]/label[2]")).click();
+
+        assertEquals(driver.findElement(By.xpath("//*[@id='totalLeaseAmount']")).getAttribute("value"), arg1);
 
         
     }

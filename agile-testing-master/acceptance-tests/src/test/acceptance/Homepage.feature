@@ -10,7 +10,7 @@ Feature: Fonctionnalités de ma page d'accueil
 		Examples:
 			| li 									|
 			| Model 3 								|
-			| Découvrir  Tesla 						|
+			| Découvrir Tesla 						|
 			| Une alimentation pour tous vos objets |
 			| Accessoires Tesla 					|
 			| Tesla Model Y 						|

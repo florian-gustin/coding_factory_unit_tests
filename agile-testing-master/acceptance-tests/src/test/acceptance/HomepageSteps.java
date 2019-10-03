@@ -36,7 +36,7 @@ public class HomepageSteps {
 
 	@Given("^je suis sur la homepage$")
 	public void je_suis_sur_la_homepage() throws Throwable {
-		driver.get("https://www.meetup.com/fr-FR/");
+		driver.get(" https://www.tesla.com/fr_FR/");
 	}
 
 	@Then("^le titre doit être \"([^\"]*)\"$")
@@ -51,6 +51,49 @@ public class HomepageSteps {
 		// By XPATH, si vous préférez...
 	    // assertEquals(driver.findElement(By.xpath("//meta[@name='description']")).getAttribute("content"), arg1);
 	}
+
+	@Given("^je suis sur homepage_navbar$")
+	public void je_suis_sur_homepage_navbar() throws Throwable {
+		// Write code here that turns the phrase above into concrete actions
+		throw new PendingException();
+	}
+
+
+	@Given("^je suis sur homepage_top_navbar$")
+	public void je_suis_sur_homepage_top_navbar() throws Throwable {
+		// Write code here that turns the phrase above into concrete actions
+		throw new PendingException();
+	}
+
+	@Then("^le titre du lien doit être \"([^\"]*)\"$")
+	public void le_titre_du_lien_doit_être(String arg1) throws Throwable {
+		// Write code here that turns the phrase above into concrete actions
+		throw new PendingException();
+	}
+
+	@When("^je clique cela me redirige vers \"([^\"]*)\"$")
+	public void je_clique_cela_me_redirige_vers(String arg1) throws Throwable {
+		// Write code here that turns the phrase above into concrete actions
+		throw new PendingException();
+	}
+
+
+	@Given("^je suis sur homepage_burger_menu$")
+	public void je_suis_sur_homepage_burger_menu() throws Throwable {
+		// Write code here that turns the phrase above into concrete actions
+		throw new PendingException();
+	}
+
+
+
+
+
+
+
+
+
+
+
 
 	@After
 	public void afterScenario() {

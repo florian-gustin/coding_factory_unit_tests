@@ -36,23 +36,23 @@ public class HomepageSteps {
 	}
 //----------------------------------------------------------------------------------------------------
 
-	@Given("^je suis sur la homepage$")
-	public void je_suis_sur_la_homepage() throws Throwable {
-		driver.get(" https://www.tesla.com/fr_FR/");
-	}
-
-	@Then("^le titre doit être \"([^\"]*)\"$")
-	public void le_titre_doit_être(String arg1) throws Throwable {
-	    assertEquals(driver.getTitle(), arg1);
-	}
-
-	@Then("^la description contient \"([^\"]*)\"$")
-	public void la_description_doit_être(String arg1) throws Throwable {
-		// By CSS Selector
-		assertTrue(driver.findElement(By.cssSelector("meta[name='description']")).getAttribute("content").contains(arg1));
-		// By XPATH, si vous préférez...
-	    // assertEquals(driver.findElement(By.xpath("//meta[@name='description']")).getAttribute("content"), arg1);
-	}
+//	@Given("^je suis sur la homepage$")
+//	public void je_suis_sur_la_homepage() throws Throwable {
+//		driver.get(" https://www.tesla.com/fr_FR/");
+//	}
+//
+//	@Then("^le titre doit être \"([^\"]*)\"$")
+//	public void le_titre_doit_être(String arg1) throws Throwable {
+//	    assertEquals(driver.getTitle(), arg1);
+//	}
+//
+//	@Then("^la description contient \"([^\"]*)\"$")
+//	public void la_description_doit_être(String arg1) throws Throwable {
+//		// By CSS Selector
+//		assertTrue(driver.findElement(By.cssSelector("meta[name='description']")).getAttribute("content").contains(arg1));
+//		// By XPATH, si vous préférez...
+//	    // assertEquals(driver.findElement(By.xpath("//meta[@name='description']")).getAttribute("content"), arg1);
+//	}
 
 	//////////
 
@@ -65,53 +65,62 @@ public class HomepageSteps {
 	@Then("^le titre navbar doit être \"([^\"]*)\"$")
 	public void le_titre_navbar_doit_être(String arg1) throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
-		assertThat(driver.findElements(By.cssSelector(".tds-hero_header")).getText(), containsString(arg1));
-//		List<WebElement> elements = new ArrayList();
-//		for(int i = 0; i < 5; i++){
+		switch (arg1) {
+			case "Model 3":
+				assertThat(driver.findElement(By.cssSelector("#item1-812530015-content > div:nth-child(1) > h1:nth-child(1)")).getText(), containsString(arg1));
+				break;
+			case "Découvrir Tesla":
+				assertThat(driver.findElement(By.xpath("/html/body/div[1]/main/section/section/div/div/div/div/section[2]/section/div/div[2]/div[2]/div[1]/header/h1/span")).getText(), containsString(arg1));
+				break;
+			case "Une alimentation pour tous vos objets":
+				assertThat(driver.findElement(By.xpath("/html/body/div[1]/main/section/section/div/div/div/div/section[3]/section/div/div/div[2]/div[1]/header/h1/span")).getText(), containsString(arg1));
+				break;
+			case "Accessoires Tesla":
+				assertThat(driver.findElement(By.xpath("/html/body/div[1]/main/section/section/div/div/div/div/section[4]/section/div/div/div[2]/div[1]/header/h1/span")).getText(), containsString(arg1));
+				break;
+			case "Tesla Model Y":
+				assertThat(driver.findElement(By.xpath("/html/body/div[1]/main/section/section/div/div/div/div/section[5]/section/div/div/div[2]/div[1]/header/h1/span[1]")).getText(), containsString("Tesla"));
+				assertThat(driver.findElement(By.xpath("/html/body/div[1]/main/section/section/div/div/div/div/section[5]/section/div/div/div[2]/div[1]/header/h1/span[2]")).getText(), containsString("Model Y"));
+				break;
+		}
+
+	}
+
+//	@Given("^je suis sur homepage_top_navbar$")
+//	public void je_suis_sur_homepage_top_navbar() throws Throwable {
+//		// Write code here that turns the phrase above into concrete actions
+//		driver.get(" https://www.tesla.com/fr_FR/");
+//	}
 //
-//		}
+//	@Then("^le titre topnavbar doit être \"([^\"]*)\"$")
+//	public void le_titre_topnavbar_doit_être(String arg1) throws Throwable {
+//		// Write code here that turns the phrase above into concrete actions
 //
-//		List<WebElement> elements = driver.findElements(By.CssSelector(".side_nav-container li:eq(0)"));
-//		for (WebElement element : elements) {
-//			assertEquals(element.getAttribute("data-title"), containsString(arg1));
-//		}
-	}
-
-	@Given("^je suis sur homepage_top_navbar$")
-	public void je_suis_sur_homepage_top_navbar() throws Throwable {
-		// Write code here that turns the phrase above into concrete actions
-		driver.get(" https://www.tesla.com/fr_FR/");
-	}
-
-	@Then("^le titre topnavbar doit être \"([^\"]*)\"$")
-	public void le_titre_topnavbar_doit_être(String arg1) throws Throwable {
-		// Write code here that turns the phrase above into concrete actions
-
-	}
-
-	@When("^je clique cela me redirige vers les modèles \"([^\"]*)\"$")
-	public void je_clique_cela_me_redirige_vers_les_modèles(String arg1) throws Throwable {
-		// Write code here that turns the phrase above into concrete actions
-	}
-
-	@Given("^je suis sur homepage_burger_menu$")
-	public void je_suis_sur_homepage_burger_menu() throws Throwable {
-		// Write code here that turns the phrase above into concrete actions
-		driver.get(" https://www.tesla.com/fr_FR/");
-		throw new PendingException();
-	}
-
-	@Then("^le titre burger_menu doit être \"([^\"]*)\"$")
-	public void le_titre_burger_menu_doit_être(String arg1) throws Throwable {
-		// Write code here that turns the phrase above into concrete actions
-		throw new PendingException();
-	}
-
-	@When("^je clique cela me redirige vers les sections \"([^\"]*)\"$")
-	public void je_clique_cela_me_redirige_vers_les_sections(String arg1) throws Throwable {
-		// Write code here that turns the phrase above into concrete actions
-		throw new PendingException();
-	}
+//	}
+//
+//	@When("^je clique cela me redirige vers les modèles \"([^\"]*)\"$")
+//	public void je_clique_cela_me_redirige_vers_les_modèles(String arg1) throws Throwable {
+//		// Write code here that turns the phrase above into concrete actions
+//	}
+//
+//	@Given("^je suis sur homepage_burger_menu$")
+//	public void je_suis_sur_homepage_burger_menu() throws Throwable {
+//		// Write code here that turns the phrase above into concrete actions
+//		driver.get(" https://www.tesla.com/fr_FR/");
+//		throw new PendingException();
+//	}
+//
+//	@Then("^le titre burger_menu doit être \"([^\"]*)\"$")
+//	public void le_titre_burger_menu_doit_être(String arg1) throws Throwable {
+//		// Write code here that turns the phrase above into concrete actions
+//		throw new PendingException();
+//	}
+//
+//	@When("^je clique cela me redirige vers les sections \"([^\"]*)\"$")
+//	public void je_clique_cela_me_redirige_vers_les_sections(String arg1) throws Throwable {
+//		// Write code here that turns the phrase above into concrete actions
+//		throw new PendingException();
+//	}
 
 
 

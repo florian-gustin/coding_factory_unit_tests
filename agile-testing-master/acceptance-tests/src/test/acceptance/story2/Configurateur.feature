@@ -25,8 +25,9 @@ Feature: Configurateur Tesla Modèle S
         | Performance      | LOA Business     | A partir de 1 115 € /mois*   | - 108 € /mois   | 122 068 €      |
 
     Scenario: Ajouter le pilotage automatique engendre une augmentation du crédit de 76E/Mois
-        Given Je suis à l'étape "Pilotage automatique"
-        When Cliquer sur "Ajouter cette option"
+        Given Je suis sur la page du configurateur
+        When Je clique sur "Pilotage automatique"
+        And Cliquer sur "Ajouter cette option"
         Then Le "crédit ballon" passe de "857 € / mois" à "933 € / mois" soit une augmentation de 76E/mois
 
     Scenario: Je souhaite connaître les boutiques Tesla lorsque j'ai fini l'étape du configurateur

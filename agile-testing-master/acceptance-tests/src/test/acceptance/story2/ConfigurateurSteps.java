@@ -76,13 +76,12 @@ public class ConfigurateurSteps {
     @When("^je sélectionne le \"([^\"]*)\"$")
     public void je_sélectionne_le(String arg1) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        if(arg1 == "Performance"){
+        if (arg1 == "Performance") {
             driver.findElement(By.xpath("/html/body/div/div/main/div/div/div[2]/div[2]/div/div[3]/div/div[3]/div[2]/div[1]/div/span/p")).click();
-        }
-        else{
+        } else {
             driver.findElement(By.xpath("/html/body/div/div/main/div/div/div[2]/div[2]/div/div[3]/div/div[3]/div[1]/div/div")).click();
         }
-            
+
     }
 
     @When("^Je sélectionne le mode paiement \"([^\"]*)\"$")
@@ -95,8 +94,8 @@ public class ConfigurateurSteps {
     @Then("^Les mensualités sont de \"([^\"]*)\"$")
     public void les_mensualités_sont_de(String arg1) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        if(arg1 == "A partir de 1 115 € /mois*") {
-             driver.findElement(By.xpath("/html/body/div/div/main/div/div/div[2]/div[2]/div/div[3]/div/div[3]/div[2]/div[1]/div/span/p")).click();
+        if (arg1 == "A partir de 1 115 € /mois*") {
+            driver.findElement(By.xpath("/html/body/div/div/main/div/div/div[2]/div[2]/div/div[3]/div/div[3]/div[2]/div[1]/div/span/p")).click();
         }
     }
 
@@ -108,8 +107,8 @@ public class ConfigurateurSteps {
 
     @Then("^Le montant total au terme du contrat est de \"([^\"]*)\"$")
     public void le_montant_total_au_terme_du_contrat_est_de(String arg1) throws Throwable {
-        if(arg1 == "122 068 €") {
-            driver.findElement(By.xpath("/html/body/div/div/main/div/div/div[2]/div[2]/div/div[3]/div/div[3]/div[2]/div[1]/div/span/p")).click();            
+        if (arg1 == "122 068 €") {
+            driver.findElement(By.xpath("/html/body/div/div/main/div/div/div[2]/div[2]/div/div[3]/div/div[3]/div[2]/div[1]/div/span/p")).click();
         }
         driver.findElement(By.xpath("//a[@class='finance-content--modal']")).click();
 
@@ -117,19 +116,27 @@ public class ConfigurateurSteps {
 
         assertEquals(driver.findElement(By.xpath("//*[@id='totalLeaseAmount']")).getAttribute("value"), arg1);
 
-        
+
     }
 
     @Given("^Je suis à l'étape \"([^\"]*)\"$")
     public void je_suis_à_l_étape(String arg1) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        driver.get("https://www.tesla.com/fr_FR/models/design#battery");
+    }
+
+
+    @When("^Je clique sur \"([^\"]*)\"$")
+    public void je_clique_sur(String arg1) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        driver.findElement(By.xpath("//li[@label='autopilot']")).click();
+        
     }
 
     @When("^Cliquer sur \"([^\"]*)\"$")
     public void cliquer_sur(String arg1) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        driver.findElement(By.xpath("/html/body/div/div/main/div/div/div[2]/div[2]/div/div/div/div[3]/div[2]/div[2]/div[1]/i']")).click();
     }
 
     @Then("^Le \"([^\"]*)\" passe de \"([^\"]*)\" à \"([^\"]*)\" soit une augmentation de (\\d+)E/mois$")
@@ -138,15 +145,16 @@ public class ConfigurateurSteps {
         throw new PendingException();
     }
 
-    @When("^Je clique sur le logo TESLA$")
+    @When("^Je clique sur le logo TESLA")
     public void je_clique_sur_le_logo_TESLA() throws Throwable {
-        driver.findElement(By.xpath("//a[@title='Tesla Motors']")).click();
+        driver.findElement(By.xpath("//a[@class='tsla-header-main--logo tds-icon tds-icon-wordmark']")).click();
 
     }
 
     @When("^Je vais en bas de page et je clique sur \"([^\"]*)\"$")
     public void je_vais_en_bas_de_page_et_je_clique_sur(String arg1) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
+        
         driver.findElement(By.xpath("//a[@title='Localisations']")).click();
     }
 

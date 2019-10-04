@@ -127,6 +127,26 @@ public class HomepageSteps {
 	@When("^je clique cela me redirige vers les modèles \"([^\"]*)\"$")
 	public void je_clique_cela_me_redirige_vers_les_modèles(String arg1) throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
+		switch (arg1) {
+			case "https://www.tesla.com/fr_FR/models":
+				assertThat(driver.findElement(By.xpath("//*[@id=\"tds-header-main\"]/div/div/nav/div[1]/ol/li[1]/a")).getAttribute("href"), containsString(arg1));
+				break;
+			case "https://www.tesla.com/fr_FR/model3":
+				assertThat(driver.findElement(By.xpath("//*[@id=\"tds-header-main\"]/div/div/nav/div[1]/ol/li[2]/a")).getAttribute("href"), containsString(arg1));
+				break;
+			case "https://www.tesla.com/fr_FR/modelx":
+				assertThat(driver.findElement(By.xpath("//*[@id=\"tds-header-main\"]/div/div/nav/div[1]/ol/li[3]/a")).getAttribute("href"), containsString(arg1));
+				break;
+			case "https://www.tesla.com/fr_FR/modely":
+				assertThat(driver.findElement(By.xpath("//*[@id=\"tds-header-main\"]/div/div/nav/div[1]/ol/li[4]/a")).getAttribute("href"), containsString(arg1));
+				break;
+			case "https://www.tesla.com/fr_FR/roadster":
+				assertThat(driver.findElement(By.xpath("//*[@id=\"tds-header-main\"]/div/div/nav/div[1]/ol/li[5]/a")).getAttribute("href"), containsString(arg1));
+				break;
+			case "https://www.tesla.com/fr_FR/energy":
+				assertThat(driver.findElement(By.xpath("//*[@id=\"tds-header-main\"]/div/div/nav/div[1]/ol/li[6]/a")).getAttribute("href"), containsString(arg1));
+				break;
+		}
 	}
 
 	@Given("^je suis sur homepage_burger_menu$")
@@ -175,6 +195,36 @@ public class HomepageSteps {
 	@When("^je clique cela me redirige vers les sections \"([^\"]*)\"$")
 	public void je_clique_cela_me_redirige_vers_les_sections(String arg1) throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
+		switch (arg1) {
+			case "https://www.tesla.com/fr_FR/blog":
+				assertThat(driver.findElement(By.cssSelector("ol.tds-header-nav--list:nth-child(2) > li:nth-child(1) > a:nth-child(1)")).getAttribute("href"), containsString(arg1));
+				break;
+			case "https://www.tesla.com/fr_FR/inventory/new/ms":
+				assertThat(driver.findElement(By.cssSelector("ol.tds-header-nav--list:nth-child(2) > li:nth-child(2) > a:nth-child(1)")).getAttribute("href"), containsString(arg1));
+				break;
+			case "https://www.tesla.com/fr_FR/inventory/used/ms":
+				assertThat(driver.findElement(By.cssSelector("ol.tds-header-nav--list:nth-child(2) > li:nth-child(3) > a:nth-child(1)")).getAttribute("href"), containsString(arg1));
+				break;
+			case "https://www.tesla.com/fr_FR/Enterprise":
+				assertThat(driver.findElement(By.cssSelector("ol.tds-header-nav--list:nth-child(2) > li:nth-child(4) > a:nth-child(1)")).getAttribute("href"), containsString(arg1));
+				break;
+			case "https://www.tesla.com/fr_FR/charging":
+				assertThat(driver.findElement(By.cssSelector("ol.tds-header-nav--list:nth-child(2) > li:nth-child(5) > a:nth-child(1)")).getAttribute("href"), containsString(arg1));
+				break;
+			case "ttps://www.tesla.com/fr_FR/findus":
+				assertThat(driver.findElement(By.cssSelector("ol.tds-header-nav--list:nth-child(2) > li:nth-child(6) > a:nth-child(1)")).getAttribute("href"), containsString(arg1));
+				break;
+			case "https://www.tesla.com/fr_FR/events":
+				assertThat(driver.findElement(By.cssSelector("ol.tds-header-nav--list:nth-child(2) > li:nth-child(7) > a:nth-child(1)")).getAttribute("href"), containsString(arg1));
+				break;
+			case "ttps://www.tesla.com/fr_FR/carbonimpact":
+				assertThat(driver.findElement(By.cssSelector("ol.tds-header-nav--list:nth-child(2) > li:nth-child(8) > a:nth-child(1)")).getAttribute("href"), containsString(arg1));
+				break;
+			case "https://www.tesla.com/fr_FR/support":
+				assertThat(driver.findElement(By.xpath("/html/body/div[1]/div/header/div/div/nav/div[2]/ol/li[9]/a")).getAttribute("href"), containsString(arg1));
+				break;
+		}
+
 	}
 
 

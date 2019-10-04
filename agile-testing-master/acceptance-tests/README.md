@@ -35,6 +35,7 @@ cd src/
 
 ### Tests
 javac -d ../bin/ test/acceptance/Homepage*.java
+
 ```
 
 ## Then run your test cases (from bin tests folder)
@@ -51,6 +52,10 @@ Thank you.
 - depuis acceptance-test -
 1er Test :
 cd src/ && javac -d ../bin/ test/acceptance/Homepage*.java && cd .. && cd bin/ && java org.junit.runner.JUnitCore test.acceptance.HomepageTest
+
+
+cd src/ && javac -d ../bin/ test/acceptance/Powerwall*.java && cd .. && cd bin/ && java org.junit.runner.JUnitCore test.acceptance.PowerwallTest
+
 Les autrs : 
 cd .. && cd src/ && javac -d ../bin/ test/acceptance/Homepage*.java && cd .. && cd bin/ && java org.junit.runner.JUnitCore test.acceptance.HomepageTest
 

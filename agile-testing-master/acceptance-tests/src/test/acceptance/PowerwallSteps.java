@@ -45,9 +45,10 @@ public class PowerwallSteps {
     public void je_sélectionne_mes_critères_de_et(String arg1, String arg2) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
 
-        // find how to select manually by the bot
+        /// set a resolution
+        /// coordonate a click to X * Y
         assertThat(driver.findElement(By.xpath("*[@id=\"react-content\"]/div/div/div[4]/div/div[1]/div/div/div/div[3]/p")).getText(), containsString(arg1));
-        // get by the xpath the class changes or manually click on the button
+        /// coordonate a click to X * Y
         assertThat(driver.findElement(By.xpath("*[@id=\"react-content\"]/div/div/div[4]/div/div[1]/div/div/div/div[3]/p")).getText(), containsString(arg2));
 
     }
